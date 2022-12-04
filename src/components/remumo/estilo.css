@@ -1,0 +1,42 @@
+.contas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+.resumo {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.faturamento {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+table {
+    border: solid 1px rgb(141, 141, 141);
+    padding: 0px;
+    border-collapse: collapse;
+    align-items: center;
+   
+    width: 23%;
+}
+
+th {
+    border: solid 1px rgb(141, 141, 141);
+}
+
+tr {
+    text-align: center;
+}

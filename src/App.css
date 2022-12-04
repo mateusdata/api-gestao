@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+html {
+    background-color: rgb(241, 240, 240);
+    background-image: url("https://img.freepik.com/vetores-gratis/vetor-de-fundo-de-padrao-geometrico-branco-e-cinza_53876-136510.jpg?w=2000");
+    max-width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.load {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-toggler-icon {
+    padding-top: 10px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+#navbarNav {
+    display: none;
 }
 
-.App-link {
-  color: #61dafb;
+#navbarNav2 {
+    display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topo {
+    padding: 0.4rem;
+}
+
+.navbar-brand,
+a {
+    margin-left: 0.7rem;
+}
+
+#hospital {
+    background-color: #0E1931 !important;
+}
+
+div.topo {
+    background-color: rgb(241, 240, 240);
+   
 }
