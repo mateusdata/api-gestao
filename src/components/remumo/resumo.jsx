@@ -12,7 +12,6 @@ const Resumo = () => {
       .then((resposta) => resposta.json())
       .then((data) => {
         setArray(data);
-        console.log(data);
       });
     setTimeout(() => {
       if (loader) {
@@ -21,7 +20,11 @@ const Resumo = () => {
     }, 2000);
   }, [loader]);
   if (array.length === 0) {
-    return <p>sss</p>
+    return (
+      <div className="load">
+        <PropagateLoader color="#36D7B7" />
+      </div>
+    );
   }
   //console.log(array.consultas.consultas_30dias_posteriores);
   return (
@@ -79,7 +82,7 @@ const Resumo = () => {
                           : "badge-danger")
                       }
                     >
-                      {array.faturamento.anterior.comparativo}
+                      +{array.faturamento.anterior.comparativo}
                     </span>
                   </div>
                 </div>

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../../App.css"
+import "../../App.css";
 
 const MenuSuperior = () => {
-  const [menu, setMenu] =useState(true)
-  function alterarMenu(){
-    if(menu){
-      setMenu(false)
-    }
-    else{
-      setMenu(true)
+  const [menu, setMenu] = useState(true);
+  function alterarMenu() {
+    if (menu) {
+      setMenu(false);
+    } else {
+      setMenu(true);
     }
   }
   return (
@@ -18,7 +17,7 @@ const MenuSuperior = () => {
         Gestão de Hospital
       </Link>
       <button
-      onClick={alterarMenu}
+        onClick={alterarMenu}
         className="navbar-toggler"
         type="button"
         data-toggle="collapse"
@@ -26,7 +25,10 @@ const MenuSuperior = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id={ menu? "navbarNav":"navbarNav2" }>
+      <div
+        className="collapse navbar-collapse"
+        id={menu ? "navbarNav" : "navbarNav2"}
+      >
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link to="/" className="nav-link">

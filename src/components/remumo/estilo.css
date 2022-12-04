@@ -40,3 +40,12 @@ th {
 tr {
     text-align: center;
 }
+.badge-success{
+    color: green !important;
+    background-color: rgb(226, 224, 224);
+}
+.badge-danger{
+    color: red!important;
+    background-color: rgb(226, 224, 224);
+   
+}

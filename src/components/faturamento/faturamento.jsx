@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { HashLoader} from 'react-spinners';
 import Topo from '../topo/topo';
 
 const Faturamento = () => {

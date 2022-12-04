@@ -5,7 +5,7 @@ import "../../App.css";
 const Topo = (props) => {
   return (
     <div>
-        <MenuSuperior/>
+      <MenuSuperior />
       <div className="topo">{props.children}</div>
     </div>
   );

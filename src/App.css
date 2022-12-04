@@ -1,22 +1,18 @@
 html {
     background-color: rgb(241, 240, 240);
     background-image: url("https://img.freepik.com/vetores-gratis/vetor-de-fundo-de-padrao-geometrico-branco-e-cinza_53876-136510.jpg?w=2000");
-    max-width: 100%;
 }
 
 .load {
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 100vh;
 }
 
 .navbar-toggler-icon {
     padding-top: 10px !important;
 }
-
-
 
 #navbarNav {
     display: none;
@@ -40,6 +36,12 @@ a {
 }
 
 div.topo {
-    background-color: rgb(241, 240, 240);
-   
+    background-color: rgb(245, 241, 241);
+    background-image: url("https://img.freepik.com/vetores-gratis/vetor-de-fundo-de-padrao-geometrico-branco-e-cinza_53876-136510.jpg?w=2000");
+
+    width: 100%;
+}
+
+body {
+    width: 100%;
 }
