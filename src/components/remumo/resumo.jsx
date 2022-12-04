@@ -20,11 +20,8 @@ const Resumo = () => {
     }, 2000);
   }, [loader]);
   if (array.length === 0) {
-    return (
-      <div className="load">
-        <PropagateLoader color="#36D7B7" />
-      </div>
-    );
+    return 
+      
   }
   //console.log(array.consultas.consultas_30dias_posteriores);
   return (
