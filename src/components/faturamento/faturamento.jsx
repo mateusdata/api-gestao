@@ -5,11 +5,11 @@ const Faturamento = () => {
     const [array, setArray] = useState([]);
 
     useEffect(() => {
-      fetch("http://www.devup.com.br/php/api-dashboard/api/faturamento")
+      fetch("https://api-data-lac.vercel.app/api-gestao/faturamento")
         .then((resposta) => resposta.json())
         .then((data) => {
           setArray(data);
-          console.log(data);
+          //console.log(data);
         });
     }, []);
     if (array.length === 0) {
@@ -35,7 +35,7 @@ const Faturamento = () => {
                             </thead>
                             <tbody>
                                 { 
-                                    array.detalhamento.map((item,indice) => {
+                                    array.faturamento.detalhamento.map((item,indice) => {
                                         return (
                                             <tr key={indice}>
                                                 <td>{item.descricao}</td>

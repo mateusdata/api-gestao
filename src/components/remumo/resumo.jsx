@@ -8,20 +8,21 @@ const Resumo = () => {
   const [array, setArray] = useState([]);
   const [loader, setLoader] = useState(true);
   useEffect(() => {
-    fetch("http://www.devup.com.br/php/api-dashboard/api/resumo")
+    fetch("https://api-data-lac.vercel.app/api-gestao/resumo")
       .then((resposta) => resposta.json())
       .then((data) => {
         setArray(data);
+        console.log(data);
       });
+
     setTimeout(() => {
       if (loader) {
         setLoader(false);
       }
-    }, 2000);
+    }, 1000);
   }, [loader]);
   if (array.length === 0) {
-    return 
-      
+    return;
   }
   //console.log(array.consultas.consultas_30dias_posteriores);
   return (
@@ -45,7 +46,7 @@ const Resumo = () => {
                 <div className="card mt-2 text-center">
                   <div className="card-header">30 dias anteriores</div>
                   <div className="card-body">
-                    {array.consultas.consultas_30dias_anteriores}
+                    {array.resumo.consultas.consultas_30dias_anteriores}
                   </div>
                 </div>
               </div>
@@ -53,7 +54,7 @@ const Resumo = () => {
                 <div className="card mt-2 text-center">
                   <div className="card-header">Próximos 30 dias</div>
                   <div className="card-body">
-                    {array.consultas.consultas_30dias_posteriores}
+                    {array.resumo.consultas.consultas_30dias_posteriores}
                   </div>
                 </div>
               </div>
@@ -67,19 +68,22 @@ const Resumo = () => {
                 <div className="card mt-2 text-center">
                   <div className="card-header">30 dias anteriores</div>
                   <div className="card-body">
-                    {array.faturamento.anterior.valor.toLocaleString("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
-                    })}
+                    {array.resumo.faturamento.anterior.valor.toLocaleString(
+                      "pt-BR",
+                      {
+                        style: "currency",
+                        currency: "BRL",
+                      }
+                    )}
                     <span
                       className={
                         "badge ml-1 " +
-                        (array.faturamento.anterior.comparativo > 0
+                        (array.resumo.faturamento.anterior.comparativo > 0
                           ? "badge-success"
                           : "badge-danger")
                       }
                     >
-                      +{array.faturamento.anterior.comparativo}
+                      +{array.resumo.faturamento.anterior.comparativo}
                     </span>
                   </div>
                 </div>
@@ -88,19 +92,22 @@ const Resumo = () => {
                 <div className="card mt-2 text-center">
                   <div className="card-header">Próximos 30 dias</div>
                   <div className="card-body">
-                    {array.faturamento.previsao.valor.toLocaleString("pt-BR", {
-                      style: "currency",
-                      currency: "BRL",
-                    })}
+                    {array.resumo.faturamento.previsao.valor.toLocaleString(
+                      "pt-BR",
+                      {
+                        style: "currency",
+                        currency: "BRL",
+                      }
+                    )}
                     <span
                       className={
                         "badge ml-s1 " +
-                        (array.faturamento.previsao.comparativo > 0
+                        (array.resumo.faturamento.previsao.comparativo > 0
                           ? "badge-success"
                           : "badge-danger")
                       }
                     >
-                      {array.faturamento.previsao.comparativo} %
+                      {array.resumo.faturamento.previsao.comparativo} %
                     </span>
                   </div>
                 </div>

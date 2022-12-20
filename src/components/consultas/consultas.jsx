@@ -5,14 +5,16 @@ const Consultas = () => {
   const [array, setArray] = useState([]);
 
   useEffect(() => {
-    fetch("http://www.devup.com.br/php/api-dashboard/api/consultas")
+    fetch("https://api-data-lac.vercel.app/api-gestao/consultas")
       .then((resposta) => resposta.json())
       .then((data) => {
         setArray(data);
+    
+        //console.log(data);
       });
   }, []);
   if (array.length === 0) {
-    return;
+    return 
   }
   return (
     <Topo>
@@ -30,7 +32,8 @@ const Consultas = () => {
                 </tr>
               </thead>
               <tbody>
-                {array.realizadas.map((item, indice) => {
+
+                {array.consultas.realizadas.map((item, indice) => {
                   return (
                     <tr key={indice}>
                       <td>{item.especialidade}</td>
@@ -53,7 +56,7 @@ const Consultas = () => {
                 </tr>
               </thead>
               <tbody>
-                {array.marcadas.map((item, indice) => {
+                {array.consultas.marcadas.map((item, indice) => {
                   return (
                     <tr key={indice}>
                       <td>{item.especialidade}</td>
