@@ -6,7 +6,7 @@ const Topo = (props) => {
   return (
     <div>
       <MenuSuperior />
-      <div className="topo">{props.children}</div>
+      <div className="tospo">{props.children}</div>
     </div>
   );
 };

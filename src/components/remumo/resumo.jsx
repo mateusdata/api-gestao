@@ -12,17 +12,17 @@ const Resumo = () => {
       .then((resposta) => resposta.json())
       .then((data) => {
         setArray(data);
-        console.log(data);
+       // console.log(data);
       });
 
     setTimeout(() => {
       if (loader) {
         setLoader(false);
       }
-    }, 1000);
+    }, 1500);
   }, [loader]);
   if (array.length === 0) {
-    return;
+    return  <Topo/>;
   }
   //console.log(array.consultas.consultas_30dias_posteriores);
   return (

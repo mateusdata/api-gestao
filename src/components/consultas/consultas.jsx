@@ -9,12 +9,10 @@ const Consultas = () => {
       .then((resposta) => resposta.json())
       .then((data) => {
         setArray(data);
-    
-        //console.log(data);
       });
   }, []);
   if (array.length === 0) {
-    return 
+    return <Topo/>
   }
   return (
     <Topo>
@@ -32,7 +30,6 @@ const Consultas = () => {
                 </tr>
               </thead>
               <tbody>
-
                 {array.consultas.realizadas.map((item, indice) => {
                   return (
                     <tr key={indice}>

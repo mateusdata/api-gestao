@@ -12,7 +12,7 @@ const MenuSuperior = () => {
     }
   }
   return (
-    <nav id="hospital" className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div id="hospital" className="navbar navbar-expand-lg navbar-dark bg-dark">
       <Link to="/" className="navbar-brand">
         Gestão de Hospital
       </Link>
@@ -47,7 +47,7 @@ const MenuSuperior = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   );
 };
 

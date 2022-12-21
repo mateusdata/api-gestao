@@ -13,7 +13,7 @@ const Faturamento = () => {
         });
     }, []);
     if (array.length === 0) {
-      return 
+      return <Topo/>
     }
 
     return(
